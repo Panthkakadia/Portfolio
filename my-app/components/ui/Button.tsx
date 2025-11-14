@@ -1,36 +1,71 @@
-import { ButtonHTMLAttributes, forwardRef } from 'react'
-import { motion } from 'framer-motion'
+'use client'
+
+import { motion, HTMLMotionProps } from 'framer-motion'
+import { forwardRef, ButtonHTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
-  size?: 'sm' | 'md' | 'lg'
-  children: React.ReactNode
+// Define button variants
+const buttonVariants = {
+  variant: {
+    default: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    destructive: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
+    outline: 'border border-slate-300 bg-transparent text-slate-900 hover:bg-slate-100 focus:ring-slate-500',
+    secondary: 'bg-slate-200 text-slate-900 hover:bg-slate-300 focus:ring-slate-500',
+    ghost: 'text-slate-900 hover:bg-slate-100 focus:ring-slate-500',
+    link: 'text-blue-600 underline-offset-4 hover:underline focus:ring-blue-500',
+  },
+  size: {
+    default: 'h-10 px-4 py-2',
+    sm: 'h-9 rounded-md px-3 text-sm',
+    lg: 'h-11 rounded-md px-8 text-lg',
+    icon: 'h-10 w-10',
+  },
+}
+
+// Create proper interface that excludes conflicting animation props
+interface ButtonProps extends Omit<
+  HTMLMotionProps<'button'>, 
+  'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'
+> {
+  variant?: keyof typeof buttonVariants.variant
+  size?: keyof typeof buttonVariants.size
+  asChild?: boolean
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'primary', size = 'md', children, ...props }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-300'
-    
-    const variants = {
-      primary: 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl',
-      secondary: 'bg-gray-600 hover:bg-gray-700 text-white',
-      outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white',
-      ghost: 'text-gray-300 hover:text-primary-500 hover:bg-primary-500/10'
-    }
-    
-    const sizes = {
-      sm: 'px-3 py-1.5 text-sm',
-      md: 'px-6 py-3 text-base',
-      lg: 'px-8 py-4 text-lg'
-    }
+  ({ 
+    className, 
+    variant = 'default', 
+    size = 'default', 
+    children,
+    disabled,
+    ...props 
+  }, ref) => {
+    const baseClasses = [
+      'inline-flex items-center justify-center rounded-md text-sm font-medium',
+      'transition-colors duration-200',
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+      'disabled:pointer-events-none disabled:opacity-50',
+      'cursor-pointer'
+    ].join(' ')
 
     return (
       <motion.button
         ref={ref}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        className={cn(baseClasses, variants[variant], sizes[size], className)}
+        className={cn(
+          baseClasses,
+          buttonVariants.variant[variant],
+          buttonVariants.size[size],
+          className
+        )}
+        whileHover={disabled ? {} : { scale: 1.02 }}
+        whileTap={disabled ? {} : { scale: 0.98 }}
+        transition={{
+          type: "spring",
+          stiffness: 400,
+          damping: 17
+        }}
+        disabled={disabled}
         {...props}
       >
         {children}
@@ -40,4 +75,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 )
 
 Button.displayName = 'Button'
+
 export default Button
+export { buttonVariants }
+export type { ButtonProps }
