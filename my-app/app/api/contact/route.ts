@@ -38,23 +38,23 @@ export async function POST(request: NextRequest) {
     // - EmailJS
 
     // Example with Resend (uncomment when you have API key):
-    /*
-    import { Resend } from 'resend'
-    const resend = new Resend(process.env.RESEND_API_KEY)
     
-    await resend.emails.send({
-      from: 'portfolio@panthkakadia.com',
-      to: 'panthkakadia502@gmail.com',
-      subject: `Portfolio Contact: ${body.name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${body.name}</p>
-        <p><strong>Email:</strong> ${body.email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${body.message}</p>
-      `
-    })
-    */
+    // import { Resend } from 'resend';
+    // const resend = new Resend(re_hQzFYTpc_C7tWXosja2rAgyide8scrh7K);
+    
+    // await resend.emails.send({
+    //   from: 'portfolio@panthkakadia.com',
+    //   to: 'panthkakadia502@gmail.com',
+    //   subject: `Portfolio Contact: ${body.name}`,
+    //   html: `
+    //     <h2>New Contact Form Submission</h2>
+    //     <p><strong>Name:</strong> ${body.name}</p>
+    //     <p><strong>Email:</strong> ${body.email}</p>
+    //     <p><strong>Message:</strong></p>
+    //     <p>${body.message}</p>
+    //   `
+    // })
+    
 
     return NextResponse.json(
       { 
