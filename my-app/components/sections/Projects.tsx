@@ -14,6 +14,15 @@ const projects = [
     featured: true,
   },
   {
+    title: 'AI-Powered MCQ Analyzer',
+    description: 'Built a Java Spring Boot application that analyzes multiple-choice questions using pure algorithmic reasoning. A learning experience about the gap between rule-based systems and true AI.',
+    tech: ['Java', 'Spring Boot', 'Pattern Analysis', 'REST API'],
+    github: 'https://github.com/panthkakadia/mcq-analyzer',
+    demo: null,
+    featured: true,
+  },
+  
+  {
     title: 'AI-Enhanced E-commerce Platform',
     description: 'Full-stack e-commerce application with AI-powered product recommendations and chatbot support. Achieved 90+ Lighthouse score with real-time performance monitoring.',
     tech: ['Next.js', 'TypeScript', 'MongoDB', 'Machine Learning APIs'],
