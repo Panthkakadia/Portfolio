@@ -2,8 +2,8 @@ export const SITE_CONFIG = {
   name: 'Panth Kakadia',
   title: 'Panth Kakadia | Software Engineer',
   description: 'Computer Programming student specializing in full-stack development, Spring Boot microservices, and cloud deployment on AWS',
-  url: 'https://panthkakadia.vercel.app',
-  ogImage: 'https://panthkakadia.vercel.app/og-image.png',
+  url: 'https://kakadia.vercel.app',
+  ogImage: 'https://kakadia.vercel.app/og-image.png',
   keywords: [
     'Panth Kakadia',
     'Software Engineer',
@@ -170,27 +170,3 @@ export const LEADERSHIP_DATA = [
   }
 ]
 
-export const ANIMATION_VARIANTS = {
-  fadeInUp: {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  },
-  fadeInLeft: {
-    initial: { opacity: 0, x: -20 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.5 }
-  },
-  fadeInRight: {
-    initial: { opacity: 0, x: 20 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.5 }
-  },
-  staggerContainer: {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
-}
