@@ -11,7 +11,6 @@ const projects = [
     description: 'Designed modular Spring Boot microservice with statistical analyzers that processes multiple-choice questions. Deployed REST APIs handling 50+ concurrent requests with 99.9% uptime on AWS EC2. Built configurable decision pipeline with pattern, statistical, and structural analyzers to rank answer options and generate confidence scores.',
     tech: ['Java', 'Spring Boot', 'AWS EC2', 'Maven', 'REST API', 'Data Structures', 'Algorithms'],
     github: 'https://github.com/panthkakadia/mcq-optimizer',
-    demo: null,
     featured: true,
   },
   {
@@ -19,15 +18,13 @@ const projects = [
     description: 'Built React Native mobile app that evaluates Toronto property listings by comparing listing price vs. comparable values and days-on-market to flag overpriced properties and suggest offer ranges. Implemented Home, Search, Analysis, Saved, Auth, and Settings screens with bottom-tab navigation. Integrated Firebase Authentication and API-based listing data.',
     tech: ['React Native', 'Firebase Authentication', 'REST APIs', 'Redux', 'JavaScript'],
     github: 'https://github.com/panthkakadia/PropertyIntel',
-    demo: null,
     featured: true,
   },
   {
     title: 'Movies App — Full-Stack Movie Discovery Platform',
     description: 'Architected full-stack platform serving 100+ REST endpoints with optimized MongoDB pipelines achieving 120ms avg response time. Developed React front end with Node.js/Express backend, implemented search, browse, and detail pages with reusable components. Added user authentication for personalized movie discovery with real-time search over 10K+ records.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'AWS EC2'],
-    github: 'https://github.com/panthkakadia/movies-app',
-    demo: null,
+    github: 'https://github.com/panthkakadia/movies-app-main',
     featured: true,
   },
   {
@@ -35,7 +32,6 @@ const projects = [
     description: 'Built ETL pipeline processing 2,000+ customer records, reducing dashboard refresh time from 45s to 3s. Created analytics dashboard tracking customer/service performance metrics using Power BI. Developed Python (pandas) pipeline to clean and transform data, then modeled for reporting. Automated recurring report refresh/workflows.',
     tech: ['Python', 'Apache Spark', 'AWS EMR', 'SQL', 'Power BI', 'Pandas'],
     github: null,
-    demo: null,
     featured: false,
   },
 ]
@@ -108,30 +104,11 @@ export default function Projects() {
                         <FaGithub size={24} />
                       </a>
                     )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-primary-500 transition-colors"
-                        aria-label="Live Demo"
-                      >
-                        <FaExternalLinkAlt size={20} />
-                      </a>
-                    )}
+                 
                   </div>
                 </div>
 
-                {project.featured && (
-                  <div className="md:col-span-5 relative min-h-[200px] md:min-h-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-purple-500/10 group-hover:from-primary-500/20 group-hover:to-purple-500/20 transition-all"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
-                        💻
-                      </div>
-                    </div>
-                  </div>
-                )}
+                
               </motion.div>
             ))}
           </div>

@@ -58,8 +58,8 @@ export default function Contact() {
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'panthkakadia502@gmail.com',
-      href: 'mailto:panthkakadia502@gmail.com'
+      value: 'panthkakadia101@gmail.com',
+      href: 'mailto:panthkakadia101@gmail.com'
     },
     {
       icon: FaPhone,
