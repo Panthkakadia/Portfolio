@@ -20,32 +20,36 @@ export default function Contact() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+  
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: '457e2de2-27bd-48ea-97e0-5d6c7d4c3379', 
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      }),
+    })
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setFormData({ name: '', email: '', message: '' })
-        alert('Message sent successfully!')
-      } else {
-        alert('Failed to send message. Please try again.')
-      }
-    } catch (error) {
-      alert('An error occurred. Please try again.')
-    } finally {
-      setIsSubmitting(false)
+    if (response.ok) {
+      setFormData({ name: '', email: '', message: '' })
+      alert('Message sent successfully!')
+    } else {
+      alert('Failed to send message. Please try again.')
     }
+  } catch (error) {
+    alert('An error occurred. Please try again.')
+  } finally {
+    setIsSubmitting(false)
   }
+}
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
