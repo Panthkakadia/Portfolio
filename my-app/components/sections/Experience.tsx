@@ -7,29 +7,38 @@ import Badge from '@/components/ui/Badge'
 const experiences = [
   {
     title: 'Junior Service Technician',
-    company: 'Canada Computers',
-    period: 'Oct 2024 - Present',
+    company: 'Canada Computers & Electronics',
+    period: 'Oct 2024 - Sep 2025',
+    location: 'Vaughan, ON',
     description: [
-      'Orchestrated technical support workflows for 50+ daily interactions with 95% first-contact resolution',
-      'Analyzed customer feedback patterns improving satisfaction scores by 20%',
-      'Optimized service delivery processes reducing resolution time by 30%',
-      'Generated $15K+ monthly revenue through strategic consultation'
+      'Resolved 50+ daily technical cases across Windows/Linux with 95% first-contact resolution',
+      'Orchestrated 200+ system deployments with custom network configurations under 2-hour SLAs',
+      'Authored 15+ troubleshooting standards, reducing escalations by 20%',
+      'Provided technical consultation and hardware diagnostics for customers'
     ],
-    technologies: ['Hardware Diagnostics', 'Process Optimization', 'Customer Support']
+    technologies: ['Windows', 'Linux', 'Hardware Diagnostics', 'Network Configuration', 'Technical Support']
   },
   {
     title: 'Bookkeeper & Web Support Assistant',
-    company: 'Ilaxi\'s Food',
+    company: 'Ilaxi Foods',
     period: 'Jan 2024 - Oct 2024',
+    location: 'Toronto, ON',
     description: [
-      'Streamlined financial operations reducing processing time by 25%',
-      'Architected customer support framework handling 100+ weekly inquiries',
-      'Enhanced digital experience increasing conversion rate by 15%',
-      'Collaborated on Next.js/Tailwind implementations improving page speeds by 40%'
+      'Automated reconciliation of 100+ weekly transactions using Python, reducing processing time by 25%',
+      'Built data validation workflows ensuring 100% accuracy across JSON/XML financial feeds',
+      'Managed financial records and supported web operations',
+      'Streamlined bookkeeping processes through automation'
     ],
-    technologies: ['WordPress', 'Next.js', 'Financial Management', 'UX/UI Design']
+    technologies: ['Python', 'Data Validation', 'JSON/XML', 'Financial Systems', 'Process Automation']
   }
 ]
+
+const leadership = {
+  title: 'Event Coordinator — Volunteer',
+  organization: 'BAPS Swaminarayan Sanstha',
+  period: '2022 - Present',
+  description: 'Coordinated 15+ large-scale events, leading 50+ volunteers and optimizing schedules for community service initiatives.'
+}
 
 export default function Experience() {
   const [ref, inView] = useInView({
@@ -55,19 +64,20 @@ export default function Experience() {
             {/* Timeline line */}
             <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary-500/30"></div>
             
+            {/* Work Experience */}
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="relative pl-12 pb-12 last:pb-0"
+                className="relative pl-12 pb-12"
               >
                 {/* Timeline dot */}
                 <div className="absolute left-2 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-300"></div>
                 
                 <div className="bg-dark-100/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-primary-500/30 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">
                         {exp.title}
@@ -78,6 +88,7 @@ export default function Experience() {
                       {exp.period}
                     </span>
                   </div>
+                  <p className="text-gray-400 text-sm mb-4">{exp.location}</p>
                   
                   <ul className="space-y-2 mb-4">
                     {exp.description.map((item, itemIndex) => (
@@ -98,6 +109,36 @@ export default function Experience() {
                 </div>
               </motion.div>
             ))}
+            
+            {/* Leadership */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: experiences.length * 0.2 }}
+              className="relative pl-12 pb-0"
+            >
+              {/* Timeline dot */}
+              <div className="absolute left-2 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-300"></div>
+              
+              <div className="bg-dark-100/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-primary-500/30 transition-colors">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {leadership.title}
+                    </h3>
+                    <p className="text-primary-400 font-semibold">@ {leadership.organization}</p>
+                  </div>
+                  <span className="text-gray-400 font-mono text-sm mt-2 md:mt-0">
+                    {leadership.period}
+                  </span>
+                </div>
+                
+                <p className="text-gray-300">
+                  <span className="text-primary-500 mr-2">▹</span>
+                  {leadership.description}
+                </p>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

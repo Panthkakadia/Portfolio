@@ -3,33 +3,59 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-// Define skills data directly in the component to avoid import issues
 const skillCategories = [
   {
     title: 'Languages',
     skills: [
-      { name: 'JavaScript', level: 90 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Python', level: 80 },
-      { name: 'Java', level: 85 },
+      { name: 'Java', level: 90 },
+      { name: 'JavaScript', level: 85 },
+      { name: 'Python', level: 85 },
+      { name: 'SQL', level: 80 },
     ]
   },
   {
-    title: 'Frameworks',
+    title: 'Frameworks & APIs',
     skills: [
-      { name: 'React', level: 90 },
-      { name: 'Next.js', level: 85 },
-      { name: 'Node.js', level: 80 },
-      { name: 'Spring Boot', level: 70 },
+      { name: 'Spring Boot', level: 90 },
+      { name: 'React', level: 85 },
+      { name: 'React Native', level: 80 },
+      { name: 'Node.js/Express', level: 85 },
     ]
   },
   {
-    title: 'Tools & Technologies',
+    title: 'Databases',
     skills: [
-      { name: 'Tailwind CSS', level: 90 },
-      { name: 'MongoDB', level: 75 },
-      { name: 'Git', level: 85 },
-      { name: 'Docker', level: 60 },
+      { name: 'MongoDB', level: 85 },
+      { name: 'PostgreSQL', level: 80 },
+      { name: 'Firebase', level: 75 },
+      { name: 'Relational Design', level: 80 },
+    ]
+  },
+  {
+    title: 'Cloud & Data',
+    skills: [
+      { name: 'AWS (EC2, S3, Lambda)', level: 80 },
+      { name: 'Apache Spark', level: 75 },
+      { name: 'AWS EMR', level: 70 },
+      { name: 'REST APIs', level: 90 },
+    ]
+  },
+  {
+    title: 'Tools & DevOps',
+    skills: [
+      { name: 'Git/GitHub', level: 90 },
+      { name: 'Maven', level: 85 },
+      { name: 'Linux CLI', level: 85 },
+      { name: 'Docker', level: 70 },
+    ]
+  },
+  {
+    title: 'Specializations',
+    skills: [
+      { name: 'Full-Stack Development', level: 90 },
+      { name: 'Microservices Architecture', level: 85 },
+      { name: 'ETL Pipelines', level: 80 },
+      { name: 'Performance Optimization', level: 85 },
     ]
   }
 ]
@@ -54,7 +80,7 @@ function Skills() {
           </h2>
           <div className="h-1 w-20 bg-blue-500 mb-12"></div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
               <motion.div
                 key={index}
@@ -93,5 +119,4 @@ function Skills() {
   )
 }
 
-// Use explicit default export to avoid Next.js 15.5.x issues
 export default Skills

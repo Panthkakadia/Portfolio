@@ -27,23 +27,25 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                Hello! I'm Panth, a passionate Computer Programming student at Humber College 
-                with a deep interest in <span className="text-primary-400 font-semibold">AI integration</span>, 
-                <span className="text-primary-400 font-semibold"> full-stack development</span>, and 
-                <span className="text-primary-400 font-semibold"> performance optimization</span>.
+                Hello! I'm Panth, a Computer Programming student at Humber College 
+                with a strong passion for <span className="text-primary-400 font-semibold">Java and backend development</span>. 
+                I've built production systems ranging from <span className="text-primary-400 font-semibold">Spring Boot microservices</span> to 
+                <span className="text-primary-400 font-semibold"> React Native mobile apps</span>, always focusing on 
+                scalable architecture and clean code.
               </p>
               
               <p className="text-gray-300 text-lg leading-relaxed">
-                My journey in tech started with curiosity about how systems work under the hood. 
-                This led me to build everything from AI-powered chatbots to e-commerce platforms. 
-                Currently working at Canada Computers, where I've improved customer resolution 
-                rates by 20% through systematic process optimization.
+                My journey in tech has been driven by curiosity and a willingness to go beyond course 
+                requirements to truly understand how systems work end to end. From deploying microservices 
+                on AWS EC2 to building ETL pipelines with Apache Spark, I've gained hands-on experience 
+                with the full development lifecycle.
               </p>
               
               <p className="text-gray-300 text-lg leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or volunteering at community events. I believe in writing 
-                clean, efficient code that makes a real impact.
+                Currently working as a Junior Service Technician at Canada Computers, where I've resolved 
+                50+ daily technical cases with 95% first-contact resolution and orchestrated 200+ system 
+                deployments. When I'm not coding or troubleshooting systems, you'll find me volunteering 
+                as an Event Coordinator, leading 50+ volunteers in community service initiatives.
               </p>
             </div>
             
@@ -52,18 +54,26 @@ export default function About() {
               <div className="ml-4 space-y-2 text-gray-300">
                 <div>location: <span className="text-green-400">"Toronto, ON"</span>,</div>
                 <div>education: <span className="text-green-400">"Humber College"</span>,</div>
-                <div>graduation: <span className="text-green-400">"April 2026"</span>,</div>
-                <div>currentRole: <span className="text-green-400">"Junior Service Tech"</span>,</div>
+                <div>program: <span className="text-green-400">"Computer Programming"</span>,</div>
+                <div>graduation: <span className="text-green-400">"2026"</span>,</div>
+                <div>currentRole: <span className="text-green-400">"Junior Service Technician"</span>,</div>
                 <div>interests: [</div>
                 <div className="ml-4">
-                  <div><span className="text-green-400">"AI/ML"</span>,</div>
-                  <div><span className="text-green-400">"Web Development"</span>,</div>
-                  <div><span className="text-green-400">"System Design"</span>,</div>
-                  <div><span className="text-green-400">"Open Source"</span></div>
+                  <div><span className="text-green-400">"Spring Boot Development"</span>,</div>
+                  <div><span className="text-green-400">"Full-Stack Applications"</span>,</div>
+                  <div><span className="text-green-400">"Cloud Architecture (AWS)"</span>,</div>
+                  <div><span className="text-green-400">"Mobile Development"</span>,</div>
+                  <div><span className="text-green-400">"System Design"</span></div>
                 </div>
                 <div>],</div>
-                <div>currentlyLearning: <span className="text-green-400">"Spring Boot"</span>,</div>
-                <div>funFact: <span className="text-green-400">"Built an MCQ analyzer that's as accurate as a coin flip 😅"</span></div>
+                <div>currentlyBuilding: <span className="text-green-400">"Scalable microservices"</span>,</div>
+                <div>strengths: [</div>
+                <div className="ml-4">
+                  <div><span className="text-green-400">"Backend architecture"</span>,</div>
+                  <div><span className="text-green-400">"Problem solving"</span>,</div>
+                  <div><span className="text-green-400">"Full-stack thinking"</span></div>
+                </div>
+                <div>]</div>
               </div>
               <div className="text-primary-400 mt-4">&#125;;</div>
             </Card>

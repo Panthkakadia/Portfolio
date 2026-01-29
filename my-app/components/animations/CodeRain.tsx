@@ -20,6 +20,7 @@ export default function CodeRain() {
     const fontSize = 10
     const columns = canvas.width / fontSize
     const drops: number[] = []
+    
 
     for (let x = 0; x < columns; x++) {
       drops[x] = 1

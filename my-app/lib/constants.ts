@@ -1,23 +1,23 @@
 export const SITE_CONFIG = {
   name: 'Panth Kakadia',
   title: 'Panth Kakadia | Software Engineer',
-  description: 'Computer Programming student specializing in AI integration, full-stack development, and performance optimization',
+  description: 'Computer Programming student specializing in full-stack development, Spring Boot microservices, and cloud deployment on AWS',
   url: 'https://panthkakadia.vercel.app',
   ogImage: 'https://panthkakadia.vercel.app/og-image.png',
   keywords: [
     'Panth Kakadia',
     'Software Engineer',
     'Full Stack Developer',
-    'AI Integration',
-    'Next.js',
+    'Spring Boot',
+    'Java Developer',
     'React',
-    'TypeScript',
+    'AWS',
     'Toronto Developer'
   ],
   links: {
     github: 'https://github.com/panthkakadia',
     linkedin: 'https://linkedin.com/in/panthkakadia',
-    email: 'mailto:panthkakadia502@gmail.com',
+    email: 'mailto:panthkakadia101@gmail.com',
     phone: 'tel:+16475547618'
   }
 }
@@ -33,72 +33,97 @@ export const NAVIGATION_ITEMS = [
 
 export const SKILLS = {
   languages: [
-    { name: 'JavaScript', level: 90, icon: 'SiJavascript' },
-    { name: 'TypeScript', level: 85, icon: 'SiTypescript' },
-    { name: 'Python', level: 80, icon: 'SiPython' },
-    { name: 'Java', level: 85, icon: 'SiJava' },
-    { name: 'HTML5', level: 95, icon: 'SiHtml5' },
-    { name: 'CSS3', level: 90, icon: 'SiCss3' },
-    { name: 'SQL', level: 75, icon: 'SiMysql' }
+    { name: 'Java', level: 90, icon: 'SiJava' },
+    { name: 'JavaScript', level: 85, icon: 'SiJavascript' },
+    { name: 'Python', level: 85, icon: 'SiPython' },
+    { name: 'SQL', level: 80, icon: 'SiMysql' },
+    { name: 'TypeScript', level: 80, icon: 'SiTypescript' },
+    { name: 'HTML5', level: 90, icon: 'SiHtml5' },
+    { name: 'CSS3', level: 85, icon: 'SiCss3' }
   ],
   frameworks: [
-    { name: 'React', level: 90, icon: 'SiReact' },
-    { name: 'Next.js', level: 85, icon: 'SiNextdotjs' },
-    { name: 'Node.js', level: 80, icon: 'SiNodedotjs' },
-    { name: 'Express.js', level: 75, icon: 'SiExpress' },
-    { name: 'Spring Boot', level: 70, icon: 'SiSpringboot' },
-    { name: 'Tailwind CSS', level: 90, icon: 'SiTailwindcss' }
+    { name: 'Spring Boot', level: 90, icon: 'SiSpringboot' },
+    { name: 'React', level: 85, icon: 'SiReact' },
+    { name: 'React Native', level: 80, icon: 'SiReact' },
+    { name: 'Node.js', level: 85, icon: 'SiNodedotjs' },
+    { name: 'Express.js', level: 80, icon: 'SiExpress' },
+    { name: 'Next.js', level: 75, icon: 'SiNextdotjs' }
+  ],
+  databases: [
+    { name: 'MongoDB', level: 85, icon: 'SiMongodb' },
+    { name: 'PostgreSQL', level: 80, icon: 'SiPostgresql' },
+    { name: 'Firebase', level: 75, icon: 'SiFirebase' }
+  ],
+  cloud: [
+    { name: 'AWS EC2', level: 80, icon: 'SiAmazonaws' },
+    { name: 'AWS S3', level: 75, icon: 'SiAmazonaws' },
+    { name: 'AWS Lambda', level: 70, icon: 'SiAmazonaws' },
+    { name: 'AWS EMR', level: 70, icon: 'SiAmazonaws' },
+    { name: 'Apache Spark', level: 75, icon: 'SiApachespark' }
   ],
   tools: [
-    { name: 'Git/GitHub', level: 85, icon: 'SiGit' },
-    { name: 'MongoDB', level: 75, icon: 'SiMongodb' },
-    { name: 'Docker', level: 60, icon: 'SiDocker' },
-    { name: 'REST APIs', level: 85, icon: 'SiPostman' },
-    { name: 'WordPress', level: 80, icon: 'SiWordpress' },
-    { name: 'Figma', level: 70, icon: 'SiFigma' }
+    { name: 'Git/GitHub', level: 90, icon: 'SiGit' },
+    { name: 'Maven', level: 85, icon: 'SiApachemaven' },
+    { name: 'Docker', level: 70, icon: 'SiDocker' },
+    { name: 'REST APIs', level: 90, icon: 'SiPostman' },
+    { name: 'Power BI', level: 80, icon: 'SiPowerbi' },
+    { name: 'Linux CLI', level: 85, icon: 'SiLinux' }
   ],
   specializations: [
-    'AI Integration',
-    'Performance Optimization',
+    'Full-Stack Development',
+    'Spring Boot Microservices',
+    'Cloud Deployment (AWS)',
+    'ETL Pipelines',
     'Data Analysis',
-    'System Design',
-    'Customer Support Optimization',
-    'Process Automation'
+    'System Architecture',
+    'Automated Testing',
+    'Performance Optimization'
   ]
 }
 
 export const PROJECTS_DATA = [
   {
-    id: 'mcq-analyzer',
-    title: 'AI-Powered MCQ Analyzer',
-    description: 'Built a Java Spring Boot application that analyzes multiple-choice questions using pure algorithmic reasoning. A learning experience about the gap between rule-based systems and true AI understanding.',
-    technologies: ['Java', 'Spring Boot', 'Pattern Analysis', 'REST API'],
-    githubUrl: 'https://github.com/panthkakadia/mcq-analyzer',
+    id: 'calipher-mcq',
+    title: 'Calipher — MCQ Answer Optimization Engine',
+    description: 'Designed modular Spring Boot microservice with statistical analyzers that processes multiple-choice questions. Deployed REST APIs handling 50+ concurrent requests with 99.9% uptime on AWS EC2. Built configurable decision pipeline with pattern, statistical, and structural analyzers to rank answer options and generate confidence scores.',
+    technologies: ['Java', 'Spring Boot', 'AWS EC2', 'Maven', 'REST API', 'Data Structures', 'Algorithms'],
+    githubUrl: 'https://github.com/panthkakadia/mcq-optimizer',
     liveUrl: null,
-    featured: true,
-    category: 'ai' as const,
-    status: 'completed' as const
-  },
-  {
-    id: 'ecommerce-ai',
-    title: 'AI-Enhanced E-commerce Platform',
-    description: 'Full-stack e-commerce application with AI-powered product recommendations and chatbot support. Achieved 90+ Lighthouse score with real-time performance monitoring.',
-    technologies: ['Next.js', 'TypeScript', 'MongoDB', 'Machine Learning APIs'],
-    githubUrl: 'https://github.com/panthkakadia/ecommerce-ai',
-    liveUrl: 'https://ecommerce-demo.vercel.app',
     featured: true,
     category: 'fullstack' as const,
     status: 'completed' as const
   },
   {
-    id: 'analytics-dashboard',
-    title: 'Customer Analytics Dashboard',
-    description: 'Developed ETL pipeline processing 100K+ records with PowerBI dashboards achieving 85% forecasting accuracy.',
-    technologies: ['Python', 'PowerBI', 'SQL', 'REST APIs'],
-    githubUrl: 'https://github.com/panthkakadia/analytics-dashboard',
+    id: 'property-intel',
+    title: 'Low Ballers (Property Intel) — Real Estate Analytics App',
+    description: 'Built React Native mobile app that evaluates Toronto property listings by comparing listing price vs. comparable values and days-on-market to flag overpriced properties and suggest offer ranges. Implemented Home, Search, Analysis, Saved, Auth, and Settings screens with bottom-tab navigation. Integrated Firebase Authentication and API-based listing data with reusable UI components.',
+    technologies: ['React Native', 'Firebase Authentication', 'REST APIs', 'Redux', 'JavaScript'],
+    githubUrl: 'https://github.com/panthkakadia/PropertyIntel',
+    liveUrl: null,
+    featured: true,
+    category: 'mobile' as const,
+    status: 'completed' as const
+  },
+  {
+    id: 'movies-app',
+    title: 'Movies App — Full-Stack Movie Discovery Platform',
+    description: 'Architected full-stack platform serving 100+ REST endpoints with optimized MongoDB pipelines achieving 120ms avg response time. Developed React front end with Node.js/Express backend, implemented search, browse, and detail pages with reusable components and client-side state management. Added user authentication for personalized movie discovery with real-time search over 10K+ records.',
+    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'AWS EC2'],
+    githubUrl: 'https://github.com/panthkakadia/movies-app',
+    liveUrl: null,
+    featured: true,
+    category: 'fullstack' as const,
+    status: 'completed' as const
+  },
+  {
+    id: 'analytics-etl',
+    title: 'Customer Experience Analytics Dashboard',
+    description: 'Built ETL pipeline processing 2,000+ customer records, reducing dashboard refresh time from 45s to 3s. Created analytics dashboard tracking customer/service performance metrics using Power BI. Developed Python (pandas) pipeline to clean and transform data, then modeled for reporting. Automated recurring report refresh/workflows to reduce manual effort.',
+    technologies: ['Python', 'Apache Spark', 'AWS EMR', 'SQL', 'Power BI', 'Pandas'],
+    githubUrl: null,
     liveUrl: null,
     featured: false,
-    category: 'web' as const,
+    category: 'data' as const,
     status: 'completed' as const
   }
 ]
@@ -107,32 +132,41 @@ export const EXPERIENCE_DATA = [
   {
     id: 'canada-computers',
     title: 'Junior Service Technician',
-    company: 'Canada Computers',
-    period: 'Oct 2024 - Present',
+    company: 'Canada Computers & Electronics',
+    period: 'Oct 2024 - Sep 2025',
     description: [
-      'Orchestrated technical support workflows for 50+ daily interactions with 95% first-contact resolution',
-      'Analyzed customer feedback patterns improving satisfaction scores by 20%',
-      'Optimized service delivery processes reducing resolution time by 30%',
-      'Generated $15K+ monthly revenue through strategic consultation'
+      'Resolved 50+ daily technical cases across Windows/Linux with 95% first-contact resolution',
+      'Orchestrated 200+ system deployments with custom network configurations under 2-hour SLAs',
+      'Authored 15+ troubleshooting standards, reducing escalations by 20%',
+      'Provided technical consultation and hardware diagnostics for customers'
     ],
-    technologies: ['Hardware Diagnostics', 'Process Optimization', 'Customer Support'],
-    location: 'Toronto, ON',
+    technologies: ['Windows', 'Linux', 'Hardware Diagnostics', 'Network Configuration', 'Technical Support'],
+    location: 'Vaughan, ON',
     type: 'part-time' as const
   },
   {
     id: 'ilaxis-food',
     title: 'Bookkeeper & Web Support Assistant',
-    company: 'Ilaxi\'s Food',
+    company: 'Ilaxi Foods',
     period: 'Jan 2024 - Oct 2024',
     description: [
-      'Streamlined financial operations reducing processing time by 25%',
-      'Architected customer support framework handling 100+ weekly inquiries',
-      'Enhanced digital experience increasing conversion rate by 15%',
-      'Collaborated on Next.js/Tailwind implementations improving page speeds by 40%'
+      'Automated reconciliation of 100+ weekly transactions using Python, reducing processing time by 25%',
+      'Built data validation workflows ensuring 100% accuracy across JSON/XML financial feeds',
+      'Managed financial records and supported web operations',
+      'Streamlined bookkeeping processes through automation'
     ],
-    technologies: ['WordPress', 'Next.js', 'Financial Management', 'UX/UI Design'],
+    technologies: ['Python', 'Data Validation', 'JSON/XML', 'Financial Systems', 'Process Automation'],
     location: 'Toronto, ON',
     type: 'part-time' as const
+  }
+]
+
+export const LEADERSHIP_DATA = [
+  {
+    title: 'Event Coordinator — Volunteer',
+    organization: 'BAPS Swaminarayan Sanstha',
+    period: '2022 - Present',
+    description: 'Coordinated 15+ large-scale events, leading 50+ volunteers and optimizing schedules for community service initiatives.'
   }
 ]
 
