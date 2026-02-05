@@ -31,31 +31,29 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString()
     })
 
-    // In a real application, you might use services like:
-    // - Resend (recommended for Next.js)
-    // - SendGrid
-    // - Nodemailer
-    // - EmailJS
+export async function POST(request: NextRequest) {
+  const body = await request.json()
+  
+  await resend.emails.send({
+    from: 'portfolio@yourdomain.com', // Requires custom domain
+    to: 'panthkakadia101@gmail.com',
+    subject: `Portfolio Contact: ${body.name}`,
+    html: `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${body.name}</p>
+      <p><strong>Email:</strong> ${body.email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${body.message}</p>
+    `
+  })
+  import {Resend} from 'resend'
 
-    // Example with Resend (uncomment when you have API key):
-    
-    // import { Resend } from 'resend';
-    // const resend = new Resend(re_hQzFYTpc_C7tWXosja2rAgyide8scrh7K);
-    
-    // await resend.emails.send({
-    //   from: 'portfolio@panthkakadia.com',
-    //   to: 'panthkakadia502@gmail.com',
-    //   subject: `Portfolio Contact: ${body.name}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${body.name}</p>
-    //     <p><strong>Email:</strong> ${body.email}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <p>${body.message}</p>
-    //   `
-    // })
-    
+  const resend = new Resend(process.env.RESEND_API_key)
 
+  export async function POST(request: NextRequest) {
+    cosnt body = await.request.json()
+  }
+}
     return NextResponse.json(
       { 
         success: true, 

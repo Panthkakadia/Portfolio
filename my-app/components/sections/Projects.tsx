@@ -9,8 +9,8 @@ const projects = [
   {
     title: 'Calipher — MCQ Answer Optimization Engine',
     description: 'Designed modular Spring Boot microservice with statistical analyzers that processes multiple-choice questions. Deployed REST APIs handling 50+ concurrent requests with 99.9% uptime on AWS EC2. Built configurable decision pipeline with pattern, statistical, and structural analyzers to rank answer options and generate confidence scores.',
-    tech: ['Java', 'Spring Boot', 'AWS EC2', 'Maven', 'REST API', 'Data Structures', 'Algorithms'],
-    github: 'https://github.com/panthkakadia/mcq-optimizer',
+    tech: ['Java', 'Spring Boot', 'Maven', 'REST API', 'Data Structures', 'Algorithms'],
+    github: 'https://github.com/Panthkakadia/Calipher-2.0',
   },
   {
     title: 'Low Ballers (Property Intel) — Real Estate Analytics App',
@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'Movies App — Full-Stack Movie Discovery Platform',
     description: 'Architected full-stack platform serving 100+ REST endpoints with optimized MongoDB pipelines achieving 120ms avg response time. Developed React front end with Node.js/Express backend, implemented search, browse, and detail pages with reusable components. Added user authentication for personalized movie discovery with real-time search over 10K+ records.',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'AWS EC2'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
     github: 'https://github.com/panthkakadia/movies-app',
   },
   {
