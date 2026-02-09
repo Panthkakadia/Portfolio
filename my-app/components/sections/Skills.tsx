@@ -34,7 +34,6 @@ const skillCategories = [
   {
     title: 'Cloud & Data',
     skills: [
-      { name: 'AWS (EC2, S3, Lambda)', level: 80 },
       { name: 'Apache Spark', level: 75 },
       { name: 'AWS EMR', level: 70 },
       { name: 'REST APIs', level: 90 },
