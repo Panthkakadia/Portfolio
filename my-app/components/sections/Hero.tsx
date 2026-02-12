@@ -31,12 +31,13 @@ export default function Hero() {
             </div>
             
             <h2 className="text-2xl md:text-3xl text-gradient font-semibold mb-6">
-              Software Engineer | AI Enthusiast | Problem Solver
+              Java Backend Developer | Spring Boot | REST APIs
             </h2>
             
             <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-              Computer Programming student at Humber College building AI-powered solutions 
-              and optimizing user experiences through innovative technology.
+              Computer Programming student with hands-on experience developing Java backend systems 
+              and RESTful APIs. Skilled in Spring Boot microservices, database optimization, and 
+              automated testing frameworks including JUnit and Selenium.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -50,7 +51,7 @@ export default function Hero() {
               </motion.a>
               
               <motion.a
-                href="/Panth_Kakadia_Resume.pdf"
+                href="/Panth Kakadia Resume 2025-10-01.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
