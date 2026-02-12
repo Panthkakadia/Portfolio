@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { ContactForm } from '@/types'
+import { Resend } from 'resend'
+import { EmailTemplate } from '@app/components/section/email-template'
 
 export async function POST(request: NextRequest) {
   try {
