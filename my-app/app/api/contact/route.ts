@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     // Send email
     await resend.emails.send({
-      from: 'Portfolio <onboarding@resend.dev>', // change after domain verify
+      from: 'Portfolio <onboarding@resend.dev>',
       to: ['panthkakadia101@gmail.com'],
       subject: `Portfolio Contact: ${name}`,
       react: EmailTemplate({ name, email, message }),
