@@ -8,27 +8,21 @@ import Badge from '@/components/ui/Badge'
 const projects = [
   {
     title: 'Calipher — MCQ Answer Optimization Engine',
-    description: 'Designed modular Spring Boot microservice with statistical analyzers that processes multiple-choice questions. Deployed REST APIs handling 50+ concurrent requests with 99.9% uptime on AWS EC2. Built configurable decision pipeline with pattern, statistical, and structural analyzers to rank answer options and generate confidence scores.',
-    tech: ['Java', 'Spring Boot', 'Maven', 'REST API', 'Data Structures', 'Algorithms'],
-    github: 'https://github.com/Panthkakadia/Calipher-2.0',
+    description: 'Architected Spring Boot microservice with modular analyzer components processing concurrent requests. Implemented weighted scoring algorithms and statistical analysis modules following SOLID principles. Developed comprehensive JUnit test suite with 85% code coverage, including edge case validation.',
+    tech: ['Java', 'Spring Boot', 'Maven', 'JUnit 5', 'REST API', 'Design Patterns'],
+    github: 'https://github.com/panthkakadia/mcq-optimizer',
   },
   {
-    title: 'Low Ballers (Property Intel) — Real Estate Analytics App',
-    description: 'Built React Native mobile app that evaluates Toronto property listings by comparing listing price vs. comparable values and days-on-market to flag overpriced properties and suggest offer ranges. Implemented Home, Search, Analysis, Saved, Auth, and Settings screens with bottom-tab navigation. Integrated Firebase Authentication and API-based listing data.',
-    tech: ['React Native', 'Firebase Authentication', 'REST APIs', 'Redux', 'JavaScript'],
-    github: 'https://github.com/panthkakadia/PropertyIntel',
-  },
-  {
-    title: 'Movies App — Full-Stack Movie Discovery Platform',
-    description: 'Architected full-stack platform serving 100+ REST endpoints with optimized MongoDB pipelines achieving 120ms avg response time. Developed React front end with Node.js/Express backend, implemented search, browse, and detail pages with reusable components. Added user authentication for personalized movie discovery with real-time search over 10K+ records.',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
+    title: 'Movies Discovery Platform',
+    description: 'Engineered backend REST APIs with Node.js/Express handling user authentication and catalog search functionality. Designed relational schema in PostgreSQL for structured data and leveraged MongoDB for flexible document storage. Optimized database queries, reducing average response time to sub-200ms.',
+    tech: ['Node.js', 'Express.js', 'PostgreSQL', 'MongoDB', 'REST APIs'],
     github: 'https://github.com/panthkakadia/movies-app',
   },
   {
-    title: 'Customer Experience Analytics Dashboard',
-    description: 'Built ETL pipeline processing 2,000+ customer records, reducing dashboard refresh time from 45s to 3s. Created analytics dashboard tracking customer/service performance metrics using Power BI. Developed Python (pandas) pipeline to clean and transform data, then modeled for reporting. Automated recurring report refresh/workflows.',
-    tech: ['Python', 'Apache Spark', 'AWS EMR', 'SQL', 'Power BI', 'Pandas'],
-    github: null,
+    title: 'Low Ballers — Real Estate Analytics Mobile App',
+    description: 'Built mobile application analyzing Toronto property listings against comparable market values. Integrated Firebase Authentication for secure user sessions and persistent data storage. Consumed third-party REST APIs to retrieve and parse real estate listing data.',
+    tech: ['React Native', 'Firebase Authentication', 'REST APIs', 'JavaScript'],
+    github: 'https://github.com/panthkakadia/PropertyIntel',
   },
 ]
 
@@ -107,6 +101,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 border border-primary-500 hover:bg-primary-500/10 rounded-lg font-semibold transition-colors"
             >
+
               <FaGithub size={20} />
               View More on GitHub
             </a>
