@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center text-gray-400 text-sm">
             <p className="flex items-center justify-center gap-2">
-              Built with <FaHeart className="text-red-500" /> by Panth Kakadia
+              Built with <FaHeart className="text-red-500" /> (and caffeine) by Panth Kakadia
             </p>
             <p className="mt-2">
               © {currentYear} All rights reserved. Designed & Developed with Next.js, TypeScript & Tailwind CSS
