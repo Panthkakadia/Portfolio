@@ -27,25 +27,25 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                Hello! I'm Panth, a Computer Programming student at Humber College 
-                with a strong passion for <span className="text-primary-400 font-semibold">Java and backend development</span>. 
-                I've built production systems ranging from <span className="text-primary-400 font-semibold">Spring Boot microservices</span> to 
-                <span className="text-primary-400 font-semibold"> React Native mobile apps</span>, always focusing on 
-                scalable architecture and clean code.
+                I'm Panth, a Computer Programming student at Humber College with a strong interest 
+                in <span className="text-primary-400 font-semibold">Java backend development</span>. 
+                I focus on building <span className="text-primary-400 font-semibold">RESTful APIs</span> and 
+                <span className="text-primary-400 font-semibold"> Spring Boot microservices</span> that 
+                are maintainable, well-tested, and production-ready.
               </p>
               
               <p className="text-gray-300 text-lg leading-relaxed">
-                My journey in tech has been driven by curiosity and a willingness to go beyond course 
-                requirements to truly understand how systems work end to end. From deploying microservices 
-                on AWS EC2 to building ETL pipelines with Apache Spark, I've gained hands-on experience 
-                with the full development lifecycle.
+                My approach to development centers on writing clean code, implementing comprehensive 
+                test coverage with JUnit and Selenium, and following SOLID design principles. I've worked 
+                with both relational databases (PostgreSQL, MySQL) and NoSQL solutions (MongoDB), 
+                focusing on query optimization and proper schema design.
               </p>
               
               <p className="text-gray-300 text-lg leading-relaxed">
-                Currently working as a Junior Service Technician at Canada Computers, where I've resolved 
-                50+ daily technical cases with 95% first-contact resolution and orchestrated 200+ system 
-                deployments. When I'm not coding or troubleshooting systems, you'll find me volunteering 
-                as an Event Coordinator, leading 50+ volunteers in community service initiatives.
+                Currently working as a Junior Service Technician at Canada Computers, where I troubleshoot 
+                technical issues across Windows and Linux systems with a 90% resolution rate. This role has 
+                sharpened my problem-solving skills and taught me the importance of clear documentation 
+                and systematic debugging.
               </p>
             </div>
             
@@ -57,21 +57,27 @@ export default function About() {
                 <div>program: <span className="text-green-400">"Computer Programming"</span>,</div>
                 <div>graduation: <span className="text-green-400">"2026"</span>,</div>
                 <div>currentRole: <span className="text-green-400">"Junior Service Technician"</span>,</div>
-                <div>interests: [</div>
+                <div>focus: [</div>
                 <div className="ml-4">
-                  <div><span className="text-green-400">"Spring Boot Development"</span>,</div>
-                  <div><span className="text-green-400">"Full-Stack Applications"</span>,</div>
-                  <div><span className="text-green-400">"Cloud Architecture (AWS)"</span>,</div>
-                  <div><span className="text-green-400">"Mobile Development"</span>,</div>
-                  <div><span className="text-green-400">"System Design"</span></div>
+                  <div><span className="text-green-400">"Java Backend Development"</span>,</div>
+                  <div><span className="text-green-400">"Spring Boot Microservices"</span>,</div>
+                  <div><span className="text-green-400">"RESTful API Design"</span>,</div>
+                  <div><span className="text-green-400">"Automated Testing (JUnit)"</span>,</div>
+                  <div><span className="text-green-400">"Database Optimization"</span></div>
                 </div>
                 <div>],</div>
-                <div>currentlyBuilding: <span className="text-green-400">"Scalable microservices"</span>,</div>
-                <div>strengths: [</div>
+                <div>testing: [</div>
                 <div className="ml-4">
-                  <div><span className="text-green-400">"Backend architecture"</span>,</div>
-                  <div><span className="text-green-400">"Problem solving"</span>,</div>
-                  <div><span className="text-green-400">"Full-stack thinking"</span></div>
+                  <div><span className="text-green-400">"JUnit 5"</span>,</div>
+                  <div><span className="text-green-400">"Selenium WebDriver"</span>,</div>
+                  <div><span className="text-green-400">"Test-Driven Development"</span></div>
+                </div>
+                <div>],</div>
+                <div>databases: [</div>
+                <div className="ml-4">
+                  <div><span className="text-green-400">"PostgreSQL"</span>,</div>
+                  <div><span className="text-green-400">"MongoDB"</span>,</div>
+                  <div><span className="text-green-400">"MySQL"</span></div>
                 </div>
                 <div>]</div>
               </div>
