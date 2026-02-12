@@ -5,56 +5,63 @@ import { useInView } from 'react-intersection-observer'
 
 const skillCategories = [
   {
-    title: 'Languages',
+    title: 'Backend Development',
     skills: [
       { name: 'Java', level: 90 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'Python', level: 85 },
-      { name: 'SQL', level: 80 },
+      { name: 'Spring Boot', level: 85 },
+      { name: 'Spring MVC', level: 80 },
+      { name: 'RESTful APIs', level: 85 },
+      { name: 'Microservices', level: 75 },
+      { name: 'Design Patterns', level: 80 },
     ]
   },
   {
-    title: 'Frameworks & APIs',
+    title: 'Testing & Quality',
     skills: [
-      { name: 'Spring Boot', level: 90 },
-      { name: 'React', level: 85 },
-      { name: 'React Native', level: 80 },
-      { name: 'Node.js/Express', level: 85 },
+      { name: 'JUnit 5', level: 85 },
+      { name: 'Selenium WebDriver', level: 70 },
+      { name: 'Mockito', level: 75 },
+      { name: 'Integration Testing', level: 80 },
+      { name: 'Test-Driven Development', level: 75 },
     ]
   },
   {
     title: 'Databases',
     skills: [
-      { name: 'MongoDB', level: 85 },
-      { name: 'PostgreSQL', level: 80 },
-      { name: 'Firebase', level: 75 },
-      { name: 'Relational Design', level: 80 },
+      { name: 'PostgreSQL', level: 85 },
+      { name: 'MongoDB', level: 80 },
+      { name: 'MySQL', level: 80 },
+      { name: 'Query Optimization', level: 75 },
+      { name: 'Schema Design', level: 80 },
     ]
   },
   {
-    title: 'Cloud & Data',
+    title: 'Frontend Technologies',
     skills: [
-      { name: 'Apache Spark', level: 75 },
-      { name: 'AWS EMR', level: 70 },
-      { name: 'REST APIs', level: 90 },
+      { name: 'React', level: 80 },
+      { name: 'React Native', level: 75 },
+      { name: 'JavaScript', level: 85 },
+      { name: 'HTML5/CSS3', level: 80 },
     ]
   },
   {
-    title: 'Tools & DevOps',
+    title: 'Development Tools',
     skills: [
       { name: 'Git/GitHub', level: 90 },
       { name: 'Maven', level: 85 },
-      { name: 'Linux CLI', level: 85 },
-      { name: 'Docker', level: 70 },
+      { name: 'Linux CLI', level: 80 },
+      { name: 'IntelliJ IDEA', level: 85 },
+      { name: 'Postman', level: 85 },
     ]
   },
   {
-    title: 'Specializations',
+    title: 'Core Competencies',
     skills: [
-      { name: 'Full-Stack Development', level: 90 },
-      { name: 'Microservices Architecture', level: 85 },
-      { name: 'ETL Pipelines', level: 80 },
-      { name: 'Performance Optimization', level: 85 },
+      { name: 'Object-Oriented Programming', level: 90 },
+      { name: 'Data Structures & Algorithms', level: 85 },
+      { name: 'System Architecture', level: 75 },
+      { name: 'Code Reviews', level: 80 },
+      { name: 'Technical Documentation', level: 85 },
     ]
   }
 ]
