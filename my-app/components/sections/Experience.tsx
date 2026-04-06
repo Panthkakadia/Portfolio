@@ -2,142 +2,157 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import Badge from '@/components/ui/Badge'
 
 const experiences = [
   {
-    title: 'Junior Service Technician',
-    company: 'Canada Computers & Electronics',
-    period: 'Oct 2024 - Sep 2025',
-    location: 'Vaughan, ON',
+    title: 'Software Developer',
+    company: 'York Region Education Services (YRES)',
+    period: 'Mar 2026 — Present',
+    location: 'Ontario',
+    current: true,
     description: [
-      'Resolved 50+ daily technical cases across Windows/Linux with 95% first-contact resolution',
-      'Orchestrated 200+ system deployments with custom network configurations under 2-hour SLAs',
-      'Authored 15+ troubleshooting standards, reducing escalations by 20%',
-      'Provided technical consultation and hardware diagnostics for customers'
+      'Developing and shipping features across YRES\'s web platform: React frontends, REST API endpoints, and database queries supporting program registration, volunteer coordination, and camp management.',
+      'Identifying operational bottlenecks and building software to automate them. Writing unit and integration tests, participating in code reviews, and maintaining technical documentation.',
+      'Building data pipelines and reporting tools to surface enrollment metrics, volunteer data, and attendance insights for non-technical leadership.',
     ],
-    technologies: ['Windows', 'Linux', 'Hardware Diagnostics', 'Network Configuration', 'Technical Support']
+    technologies: ['React', 'REST APIs', 'PostgreSQL', 'Python', 'Power BI'],
   },
   {
-    title: 'Bookkeeper & Web Support Assistant',
-    company: 'Ilaxi Foods',
-    period: 'Jan 2024 - Oct 2024',
-    location: 'Toronto, ON',
+    title: 'Junior Service Technician',
+    company: 'Canada Computers & Electronics',
+    period: 'Oct 2024 — Sep 2025',
+    location: 'Vaughan, ON',
+    current: false,
     description: [
-      'Automated reconciliation of 100+ weekly transactions using Python, reducing processing time by 25%',
-      'Built data validation workflows ensuring 100% accuracy across JSON/XML financial feeds',
-      'Managed financial records and supported web operations',
-      'Streamlined bookkeeping processes through automation'
+      'Achieved 90% first-contact resolution by translating complex diagnoses into clear explanations for non-technical customers.',
+      'Documented recurring incident patterns into structured guides, reducing team escalations by 20%.',
     ],
-    technologies: ['Python', 'Data Validation', 'JSON/XML', 'Financial Systems', 'Process Automation']
-  }
+    technologies: ['Windows', 'Linux', 'Hardware Diagnostics', 'Documentation'],
+  },
+  {
+    title: 'Bookkeeper & Web Support',
+    company: "Ilaxi's Food",
+    period: 'Jan 2024 — Oct 2024',
+    location: 'Toronto, ON',
+    current: false,
+    description: [
+      'Automated weekly transaction reconciliation with a Python script, cutting processing time by 25%.',
+      'Built a JSON/XML validation framework that caught data integrity issues before downstream reports.',
+    ],
+    technologies: ['Python', 'JSON/XML', 'Data Validation', 'Automation'],
+  },
 ]
-
-const leadership = {
-  title: 'Event Coordinator — Volunteer',
-  organization: 'BAPS Swaminarayan Sanstha',
-  period: '2022 - Present',
-  description: 'Coordinated 15+ large-scale events, leading 50+ volunteers and optimizing schedules for community service initiatives.'
-}
 
 export default function Experience() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.05,
   })
 
   return (
-    <section id="experience" className="py-20 px-6">
+    <section id="experience" className="section-padding">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary-500 font-mono">04.</span> Experience
-          </h2>
-          <div className="h-1 w-20 bg-primary-500 mb-12"></div>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary-500/30"></div>
-            
-            {/* Work Experience */}
-            {experiences.map((exp, index) => (
+          <div className="flex items-center gap-4 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="text-blue-400 font-mono text-lg mr-2">04.</span>
+              Experience
+            </h2>
+            <div className="h-px bg-white/[0.06] flex-1" />
+          </div>
+          <p className="text-slate-500 mb-12 max-w-lg">
+            Where I&apos;ve worked and what I&apos;ve shipped.
+          </p>
+
+          <div className="space-y-6">
+            {experiences.map((exp, i) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="relative pl-12 pb-12"
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group glass rounded-2xl p-6 md:p-8 glass-hover relative overflow-hidden"
               >
-                {/* Timeline dot */}
-                <div className="absolute left-2 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-300"></div>
-                
-                <div className="bg-dark-100/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-primary-500/30 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
-                        {exp.title}
-                      </h3>
-                      <p className="text-primary-400 font-semibold">@ {exp.company}</p>
+                {/* Current role accent */}
+                {exp.current && (
+                  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/40 via-blue-500/20 to-transparent" />
+                )}
+
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
+                  <div>
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="text-lg font-bold text-white">{exp.title}</h3>
+                      {exp.current && (
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/10 uppercase tracking-widest">
+                          Current
+                        </span>
+                      )}
                     </div>
-                    <span className="text-gray-400 font-mono text-sm mt-2 md:mt-0">
-                      {exp.period}
+                    <p className="text-sm">
+                      <span className="text-blue-400/80">{exp.company}</span>
+                      <span className="text-slate-700 mx-2">/</span>
+                      <span className="text-slate-500">{exp.location}</span>
+                    </p>
+                  </div>
+                  <span className="text-slate-600 font-mono text-xs whitespace-nowrap">{exp.period}</span>
+                </div>
+
+                <ul className="space-y-3 mb-5">
+                  {exp.description.map((item, j) => (
+                    <li key={j} className="text-slate-400 text-sm leading-relaxed flex gap-3">
+                      <span className="text-blue-500/50 mt-1.5 flex-shrink-0">
+                        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor" /></svg>
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.04]">
+                  {exp.technologies.map((tech) => (
+                    <span key={tech} className="px-2.5 py-1 text-[11px] font-mono rounded-md bg-white/[0.03] text-slate-500 border border-white/[0.04]">
+                      {tech}
                     </span>
-                  </div>
-                  <p className="text-gray-400 text-sm mb-4">{exp.location}</p>
-                  
-                  <ul className="space-y-2 mb-4">
-                    {exp.description.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-gray-300 flex items-start">
-                        <span className="text-primary-500 mr-2 mt-2">▹</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="primary" size="sm">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
-            
-            {/* Leadership */}
+          </div>
+
+          {/* Leadership + Education row */}
+          <div className="grid md:grid-cols-2 gap-4 mt-6">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: experiences.length * 0.2 }}
-              className="relative pl-12 pb-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="glass rounded-2xl p-6 glass-hover"
             >
-              {/* Timeline dot */}
-              <div className="absolute left-2 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-300"></div>
-              
-              <div className="bg-dark-100/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-primary-500/30 transition-colors">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-1">
-                      {leadership.title}
-                    </h3>
-                    <p className="text-primary-400 font-semibold">@ {leadership.organization}</p>
-                  </div>
-                  <span className="text-gray-400 font-mono text-sm mt-2 md:mt-0">
-                    {leadership.period}
-                  </span>
-                </div>
-                
-                <p className="text-gray-300">
-                  <span className="text-primary-500 mr-2">▹</span>
-                  {leadership.description}
-                </p>
-              </div>
+              <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-3">Leadership</div>
+              <h3 className="text-white font-bold mb-1">Event Coordinator</h3>
+              <p className="text-sm text-blue-400/80 mb-3">BAPS Swaminarayan Sanstha <span className="text-slate-600 font-mono">/ 2022 — Present</span></p>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Plan and coordinate large-scale community events, manage cross-functional
+                volunteer teams, and adapt resource allocation in real time.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="glass rounded-2xl p-6 glass-hover"
+            >
+              <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-3">Education</div>
+              <h3 className="text-white font-bold mb-1">Diploma in Computer Programming</h3>
+              <p className="text-sm text-blue-400/80 mb-3">Humber College <span className="text-slate-600 font-mono">/ Expected 2026</span></p>
+              <p className="text-slate-500 text-sm">
+                OOP & DSA (Java), Database Design (SQL), Software Testing, System Architecture
+              </p>
             </motion.div>
           </div>
         </motion.div>

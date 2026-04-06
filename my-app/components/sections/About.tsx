@@ -2,7 +2,19 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import Card from '@/components/ui/Card'
+
+const techStack = [
+  'React', 'TypeScript', 'Python', 'Java', 'N8N', 'Claude API',
+  'Node.js', 'Spring Boot', 'PostgreSQL', 'MongoDB', 'Power BI',
+  'REST APIs', 'LangChain', 'Firebase', 'pandas', 'Git',
+]
+
+const highlights = [
+  { label: 'Current', value: 'Software Developer @ YRES' },
+  { label: 'Focus', value: 'Automation & AI Integration' },
+  { label: 'Education', value: 'Computer Programming, Humber College' },
+  { label: 'Based in', value: 'Toronto, ON' },
+]
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -11,81 +23,89 @@ export default function About() {
   })
 
   return (
-    <section id="about" className="py-20 px-6 bg-dark-200/50">
-      <div className="container mx-auto max-w-6xl">
+    <section id="about" className="section-padding relative overflow-hidden">
+      {/* Subtle background accent */}
+      <div className="absolute top-0 left-0 w-full h-px glow-line" />
+
+      <div className="container mx-auto max-w-5xl">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary-500 font-mono">01.</span> About Me
-          </h2>
-          <div className="h-1 w-20 bg-primary-500 mb-12"></div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-gray-300 text-lg leading-relaxed">
-                I'm Panth, a Computer Programming student at Humber College with a strong interest 
-                in <span className="text-primary-400 font-semibold">Java backend development</span>. 
-                I focus on building <span className="text-primary-400 font-semibold">RESTful APIs</span> and 
-                <span className="text-primary-400 font-semibold"> Spring Boot microservices</span> that 
-                are maintainable, well-tested, and production-ready.
+          <div className="flex items-center gap-4 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="text-blue-400 font-mono text-lg mr-2">01.</span>
+              About Me
+            </h2>
+            <div className="h-px bg-white/[0.06] flex-1" />
+          </div>
+
+          <div className="grid lg:grid-cols-5 gap-14 mt-12">
+            {/* Story */}
+            <div className="lg:col-span-3 space-y-6">
+              <p className="text-slate-300 text-lg leading-relaxed">
+                I&apos;m a Software Developer at{' '}
+                <span className="text-white font-medium">YRES</span>, building
+                React frontends, REST API endpoints, and database-driven features
+                for an educational platform serving thousands of users.
               </p>
-              
-              <p className="text-gray-300 text-lg leading-relaxed">
-                My approach to development centers on writing clean code, implementing comprehensive 
-                test coverage with JUnit and Selenium, and following SOLID design principles. I've worked 
-                with both relational databases (PostgreSQL, MySQL) and NoSQL solutions (MongoDB), 
-                focusing on query optimization and proper schema design.
+
+              <p className="text-slate-400 text-[17px] leading-relaxed">
+                My biggest obsession is eliminating manual friction. I built a production
+                N8N automation system — six workflows integrating the Claude API, Notion,
+                and third-party job APIs — that{' '}
+                <span className="text-white font-medium">cut a 90-minute process to 15 minutes</span>.
               </p>
-              
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Currently working as a Junior Service Technician at Canada Computers, where I troubleshoot 
-                technical issues across Windows and Linux systems with a 90% resolution rate. This role has 
-                sharpened my problem-solving skills and taught me the importance of clear documentation 
-                and systematic debugging.
+
+              <p className="text-slate-400 text-[17px] leading-relaxed">
+                I work daily with LLMs, AI coding tools, Python ETL pipelines, and Power BI.
+                Whether it&apos;s a React component, a REST endpoint, or a data pipeline,
+                I build things that work reliably and save people time.
               </p>
             </div>
-            
-            <Card variant="glass" className="font-mono text-sm">
-              <div className="text-primary-400 mb-4">const panth = &#123;</div>
-              <div className="ml-4 space-y-2 text-gray-300">
-                <div>location: <span className="text-green-400">"Toronto, ON"</span>,</div>
-                <div>education: <span className="text-green-400">"Humber College"</span>,</div>
-                <div>program: <span className="text-green-400">"Computer Programming"</span>,</div>
-                <div>graduation: <span className="text-green-400">"2026"</span>,</div>
-                <div>currentRole: <span className="text-green-400">"Junior Service Technician"</span>,</div>
-                <div>focus: [</div>
-                <div className="ml-4">
-                  <div><span className="text-green-400">"Java Backend Development"</span>,</div>
-                  <div><span className="text-green-400">"Spring Boot Microservices"</span>,</div>
-                  <div><span className="text-green-400">"RESTful API Design"</span>,</div>
-                  <div><span className="text-green-400">"Automated Testing (JUnit)"</span>,</div>
-                  <div><span className="text-green-400">"Database Optimization"</span></div>
-                </div>
-                <div>],</div>
-                <div>testing: [</div>
-                <div className="ml-4">
-                  <div><span className="text-green-400">"JUnit 5"</span>,</div>
-                  <div><span className="text-green-400">"Selenium WebDriver"</span>,</div>
-                  <div><span className="text-green-400">"Test-Driven Development"</span></div>
-                </div>
-                <div>],</div>
-                <div>databases: [</div>
-                <div className="ml-4">
-                  <div><span className="text-green-400">"PostgreSQL"</span>,</div>
-                  <div><span className="text-green-400">"MongoDB"</span>,</div>
-                  <div><span className="text-green-400">"MySQL"</span></div>
-                </div>
-                <div>]</div>
+
+            {/* Quick facts */}
+            <div className="lg:col-span-2 space-y-4">
+              <div className="glass rounded-2xl p-6">
+                {highlights.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
+                    className="py-3 first:pt-0 last:pb-0"
+                  >
+                    <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-1">
+                      {item.label}
+                    </div>
+                    <div className="text-white text-sm font-medium">{item.value}</div>
+                    {i < highlights.length - 1 && <div className="h-px bg-white/[0.04] mt-3" />}
+                  </motion.div>
+                ))}
               </div>
-              <div className="text-primary-400 mt-4">&#125;;</div>
-            </Card>
+            </div>
           </div>
         </motion.div>
       </div>
+
+      {/* Tech marquee strip */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="mt-20 border-y border-white/[0.04] py-5 overflow-hidden"
+      >
+        <div className="marquee-track flex gap-8 whitespace-nowrap w-max">
+          {[...techStack, ...techStack].map((tech, i) => (
+            <span key={i} className="text-sm font-mono text-slate-600 flex items-center gap-3">
+              {tech}
+              <span className="text-slate-800">/</span>
+            </span>
+          ))}
+        </div>
+      </motion.div>
     </section>
   )
 }

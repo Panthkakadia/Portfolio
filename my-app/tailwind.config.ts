@@ -26,6 +26,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
           50: '#eff6ff',
+          400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
@@ -67,14 +68,18 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'slide-down': 'slideDown 0.4s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'shimmer': 'shimmer 3s linear infinite',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glitch': 'glitch 1s linear infinite',
+        'pulse-border': 'pulse-border 2s ease-in-out infinite',
+        'gradient': 'gradient-shift 8s ease infinite',
       },
       fontFamily: {
-        'mono': ['JetBrains Mono', 'monospace'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['var(--font-jetbrains)', 'JetBrains Mono', 'monospace'],
+        'sans': ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         fadeIn: {
@@ -85,22 +90,9 @@ const config: Config = {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-        glitch: {
-          '0%, 100%': { 
-            textShadow: '0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00' 
-          },
-          '15%': { 
-            textShadow: '0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00' 
-          },
-          '16%': { 
-            textShadow: '-0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00' 
-          },
-          '49%': { 
-            textShadow: '-0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00' 
-          },
-          '50%': { 
-            textShadow: '0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00' 
-          },
+        slideDown: {
+          '0%': { transform: 'translateY(-10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
     },

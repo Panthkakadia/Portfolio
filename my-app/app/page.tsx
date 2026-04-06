@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic'
 
-// Use dynamic imports to avoid Next.js 15.5.x compound component issues
 const Hero = dynamic(() => import('@/components/sections/Hero'), { ssr: true })
 const About = dynamic(() => import('@/components/sections/About'), { ssr: true })
 const Skills = dynamic(() => import('@/components/sections/Skills'), { ssr: true })
@@ -10,7 +9,7 @@ const Contact = dynamic(() => import('@/components/sections/Contact'), { ssr: tr
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900 text-white">
+    <main>
       <Hero />
       <About />
       <Skills />

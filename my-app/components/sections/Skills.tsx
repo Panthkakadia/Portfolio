@@ -3,118 +3,110 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-const skillCategories = [
+const bentoItems = [
   {
-    title: 'Backend Development',
-    skills: [
-      { name: 'Java', level: 90 },
-      { name: 'Spring Boot', level: 85 },
-      { name: 'Spring MVC', level: 80 },
-      { name: 'RESTful APIs', level: 85 },
-      { name: 'Microservices', level: 75 },
-      { name: 'Design Patterns', level: 80 },
-    ]
+    category: 'Languages',
+    skills: ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
+    accent: 'from-blue-500/20 to-blue-600/5',
+    accentBorder: 'group-hover:border-blue-500/20',
+    tagColor: 'bg-blue-500/10 text-blue-300 border-blue-500/10',
+    size: 'md:col-span-2',
+    icon: '{ }',
   },
   {
-    title: 'Testing & Quality',
-    skills: [
-      { name: 'JUnit 5', level: 85 },
-      { name: 'Selenium WebDriver', level: 70 },
-      { name: 'Mockito', level: 75 },
-      { name: 'Integration Testing', level: 80 },
-      { name: 'Test-Driven Development', level: 75 },
-    ]
+    category: 'Automation & AI',
+    skills: ['N8N', 'Claude API', 'LangChain', 'LangGraph', 'RAG', 'MCP', 'Zapier', 'Claude Code', 'Cursor'],
+    accent: 'from-violet-500/20 to-violet-600/5',
+    accentBorder: 'group-hover:border-violet-500/20',
+    tagColor: 'bg-violet-500/10 text-violet-300 border-violet-500/10',
+    size: 'md:col-span-2',
+    icon: '~ $',
   },
   {
-    title: 'Databases',
-    skills: [
-      { name: 'PostgreSQL', level: 85 },
-      { name: 'MongoDB', level: 80 },
-      { name: 'MySQL', level: 80 },
-      { name: 'Query Optimization', level: 75 },
-      { name: 'Schema Design', level: 80 },
-    ]
+    category: 'Backend & Frontend',
+    skills: ['React', 'React Native', 'Node.js', 'Express', 'Spring Boot', 'Firebase', 'REST APIs'],
+    accent: 'from-cyan-500/20 to-cyan-600/5',
+    accentBorder: 'group-hover:border-cyan-500/20',
+    tagColor: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/10',
+    size: 'md:col-span-2',
+    icon: '< />',
   },
   {
-    title: 'Frontend Technologies',
-    skills: [
-      { name: 'React', level: 80 },
-      { name: 'React Native', level: 75 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'HTML5/CSS3', level: 80 },
-    ]
+    category: 'Data & Databases',
+    skills: ['pandas', 'ETL Pipelines', 'Power BI', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server'],
+    accent: 'from-emerald-500/20 to-emerald-600/5',
+    accentBorder: 'group-hover:border-emerald-500/20',
+    tagColor: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/10',
+    size: 'md:col-span-2',
+    icon: 'db',
   },
   {
-    title: 'Development Tools',
-    skills: [
-      { name: 'Git/GitHub', level: 90 },
-      { name: 'Maven', level: 85 },
-      { name: 'Linux CLI', level: 80 },
-      { name: 'IntelliJ IDEA', level: 85 },
-      { name: 'Postman', level: 85 },
-    ]
+    category: 'Tools & Workflow',
+    skills: ['Git', 'Maven', 'Jira', 'Linux CLI', 'Agile/Scrum', 'JUnit', 'JSON/XML'],
+    accent: 'from-amber-500/20 to-amber-600/5',
+    accentBorder: 'group-hover:border-amber-500/20',
+    tagColor: 'bg-amber-500/10 text-amber-300 border-amber-500/10',
+    size: 'md:col-span-2',
+    icon: '>>',
   },
-  {
-    title: 'Core Competencies',
-    skills: [
-      { name: 'Object-Oriented Programming', level: 90 },
-      { name: 'Data Structures & Algorithms', level: 85 },
-      { name: 'System Architecture', level: 75 },
-      { name: 'Code Reviews', level: 80 },
-      { name: 'Technical Documentation', level: 85 },
-    ]
-  }
 ]
 
-function Skills() {
+export default function Skills() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.05,
   })
 
   return (
-    <section id="skills" className="py-20 px-6 bg-slate-900/50">
-      <div className="container mx-auto max-w-6xl">
+    <section id="skills" className="section-padding">
+      <div className="container mx-auto max-w-5xl">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            <span className="text-blue-500 font-mono">02.</span> Technical Skills
-          </h2>
-          <div className="h-1 w-20 bg-blue-500 mb-12"></div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillCategories.map((category, index) => (
+          <div className="flex items-center gap-4 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold whitespace-nowrap">
+              <span className="text-blue-400 font-mono text-lg mr-2">02.</span>
+              Technical Skills
+            </h2>
+            <div className="h-px bg-white/[0.06] flex-1" />
+          </div>
+          <p className="text-slate-500 mb-12 max-w-lg">
+            Tools and technologies I work with daily to build, automate, and ship.
+          </p>
+
+          {/* Bento grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {bentoItems.map((item, i) => (
               <motion.div
-                key={index}
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-500/10"
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className={`group relative rounded-2xl glass glass-hover p-6 ${item.size} ${item.accentBorder} overflow-hidden`}
               >
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                  {category.title}
-                </h3>
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-300">{skill.name}</span>
-                        <span className="text-xs text-gray-400">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-slate-700 rounded-full h-2">
-                        <motion.div
-                          className="bg-blue-500 h-2 rounded-full"
-                          initial={{ width: 0 }}
-                          animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                          transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.1 }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                {/* Gradient glow on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-sm font-mono text-slate-400 uppercase tracking-wider">
+                      {item.category}
+                    </h3>
+                    <span className="text-xs font-mono text-slate-600">{item.icon}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {item.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className={`px-3 py-1.5 text-sm rounded-lg border ${item.tagColor} transition-colors duration-200`}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -124,5 +116,3 @@ function Skills() {
     </section>
   )
 }
-
-export default Skills

@@ -4,28 +4,38 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import ScrollProgress from '@/components/ui/ScrollProgress'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter'
+  variable: '--font-inter',
 })
 
-const jetbrainsMono = JetBrains_Mono({ 
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-jetbrains'
+  variable: '--font-jetbrains',
 })
 
 export const metadata: Metadata = {
-  title: 'Panth Kakadia | Software Engineer',
-  description: 'Computer Programming student specializing in AI integration, full-stack development, and performance optimization',
-  keywords: 'Panth Kakadia, Software Engineer, Full Stack Developer, AI, Next.js, React, TypeScript',
+  title: 'Panth Kakadia — Software Developer',
+  description: 'Software Developer building React frontends, REST APIs, and AI-powered automation systems. Turned a 90-minute manual process into a 15-minute automated workflow.',
+  keywords: 'Panth Kakadia, Software Developer, React, TypeScript, N8N, AI Automation, REST APIs, Toronto',
   authors: [{ name: 'Panth Kakadia' }],
   openGraph: {
-    title: 'Panth Kakadia | Software Engineer',
-    description: 'Building AI-powered solutions & optimizing user experiences',
+    title: 'Panth Kakadia — Software Developer',
+    description: 'React frontends, REST APIs, and AI-powered automation. I eliminate manual friction.',
     url: 'https://panthkakadia.vercel.app',
-    siteName: 'Panth Kakadia Portfolio',
+    siteName: 'Panth Kakadia',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Panth Kakadia — Software Developer',
+    description: 'React frontends, REST APIs, and AI-powered automation. I eliminate manual friction.',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
@@ -36,7 +46,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-dark-300 text-gray-100`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-[#030712] text-slate-100 antialiased`}>
+        <ScrollProgress />
         <Navbar />
         <main className="min-h-screen">
           {children}
