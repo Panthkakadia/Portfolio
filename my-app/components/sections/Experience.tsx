@@ -139,8 +139,9 @@ export default function Experience() {
                 Plan and coordinate large-scale community events, manage cross-functional
                 volunteer teams, and adapt resource allocation in real time.
               </p>
-            </motion.div>
-
+            </motion.div> 
+             
+          
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}

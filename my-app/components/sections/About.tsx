@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer'
 const techStack = [
   'React', 'TypeScript', 'Python', 'Java', 'N8N', 'Claude API',
   'Node.js', 'Spring Boot', 'PostgreSQL', 'MongoDB', 'Power BI',
-  'REST APIs', 'LangChain', 'Firebase', 'pandas', 'Git',
+  'REST APIs', 'Docker', 'AWS', 'LangChain', 'pandas', 'scikit-learn', 'Git',
 ]
 
 const highlights = [

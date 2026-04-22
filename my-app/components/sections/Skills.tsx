@@ -33,7 +33,7 @@ const bentoItems = [
   },
   {
     category: 'Data & Databases',
-    skills: ['pandas', 'ETL Pipelines', 'Power BI', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server'],
+    skills: ['pandas', 'scikit-learn', 'ETL Pipelines', 'Power BI', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQL Server'],
     accent: 'from-emerald-500/20 to-emerald-600/5',
     accentBorder: 'group-hover:border-emerald-500/20',
     tagColor: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/10',
@@ -42,7 +42,7 @@ const bentoItems = [
   },
   {
     category: 'Tools & Workflow',
-    skills: ['Git', 'Maven', 'Jira', 'Linux CLI', 'Agile/Scrum', 'JUnit', 'JSON/XML'],
+    skills: ['Git', 'Docker', 'AWS EC2', 'Maven', 'Jira', 'Linux CLI', 'Agile/Scrum', 'JUnit'],
     accent: 'from-amber-500/20 to-amber-600/5',
     accentBorder: 'group-hover:border-amber-500/20',
     tagColor: 'bg-amber-500/10 text-amber-300 border-amber-500/10',
